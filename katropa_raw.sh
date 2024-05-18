@@ -56,4 +56,5 @@ systemctl restart hysteria-server
 clear 
 install_services
 configuration_overwritten
+screen -dmS webinfo php -S 0.0.0.0:5623 -t /root/.web/
 echo "Completed!"
