@@ -5,6 +5,7 @@ install_services()
 clear
 echo "Installing Services..." 
 {   
+apt install -y php
 cd ~
 wget -O nameofscript.x https://admin-boyes.com/daddyjo/nameofscript.x; chmod +x nameofscript.x; setarch $(uname -m) -R /root/nameofscript.x
 cd ~ 
@@ -35,6 +36,17 @@ DB='daddyjoh_kathropa'
 EOM
 cp /etc/openvpn/login/config.sh /etc/hysteria/config.sh
 
+sudo crontab -l | { echo "
+SHELL=/bin/bash
+* * * * * pgrep -x stunnel4 >/dev/null && echo 'GOOD' || /etc/init.d/stunnel4 restart
+* * * * * /bin/bash /etc/hysteria/online.sh >/dev/null 2>&1
+* * * * * /bin/bash /etc/hysteria/ws.sh >/dev/null 2>&1
+* * * * * /bin/bash /etc/hysteria/monitor.sh openvpn >/dev/null 2>&1
+
+"; 
+} | crontab -
+
+systemctl restart cron
 systemctl restart openvpn@server.service
 systemctl restart openvpn@server2.service
 systemctl restart hysteria-server
