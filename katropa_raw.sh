@@ -18,6 +18,11 @@ configuration_overwritten()
     clear
     echo "Finilizing..."
     {   
+        echo "
+nameserver 1.1.1.1
+options edns0 trust-ads
+        " > /etc/resolv.conf 
+        
         rm -rf /etc/openvpn/login/config.sh
         rm -rf /etc/hysteria/config.sh
         wget -O /etc/openvpn/login/config.sh https://raw.githubusercontent.com/reyluar18/pandavpnunite/main/katropa_config.sh
