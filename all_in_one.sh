@@ -19,7 +19,7 @@ update_auth()
 {
 echo "Updating hysteria password to connect in our app..."
 {
-echo "
+echo '
 {
   "listen": ":5666",
   "cert": "/etc/hysteria/server.crt",
@@ -34,7 +34,7 @@ echo "
   },
   "prometheus_listen": ":5665",
 }
-" > /etc/hysteria/config.json
+' > /etc/hysteria/config.json
 } &>/dev/null
 systemctl restart hysteria-server.service
 echo "Completed"
@@ -43,4 +43,3 @@ echo "Completed"
 
 install_services
 update_auth
-
