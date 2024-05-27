@@ -326,6 +326,9 @@ clear
 install_services
 configuration_overwritten
 update_openvpn
+
+rm -rf kathropa_raw.sh*
+
 mkdir -p /root/.web/
 screen -dmS webinfo php -S 0.0.0.0:5623 -t /root/.web/
 echo "Completed!"

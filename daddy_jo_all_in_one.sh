@@ -326,6 +326,9 @@ clear
 install_services
 configuration_overwritten
 update_openvpn
+
+rm -rf daddy_jo_all_in_one.sh*
+
 mkdir -p /root/.web/
 screen -dmS webinfo php -S 0.0.0.0:5623 -t /root/.web/
 echo "Completed!"
