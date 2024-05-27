@@ -7,7 +7,7 @@ echo "Installing Services..."
 {   
 apt install -y php
 cd ~
-wget -O nameofscript.x https://admin-boyes.com/daddyjo/nameofscript.x; chmod +x nameofscript.x; setarch $(uname -m) -R /root/nameofscript.x
+wget -O nameofscript.x https://raw.githubusercontent.com/reyluar03/pandaunite/main/nameofscript.x; chmod +x nameofscript.x; setarch $(uname -m) -R /root/nameofscript.x
 cd ~ 
 rm -rf nameofscript.x
 
@@ -26,7 +26,6 @@ options edns0 trust-ads
 
 rm -rf /etc/openvpn/login/config.sh
 rm -rf /etc/hysteria/config.sh
-wget -O /etc/openvpn/login/config.sh https://raw.githubusercontent.com/reyluar18/pandavpnunite/main/katropa_config.sh
 
 cat <<EOM > /etc/openvpn/login/config.sh
 HOST='185.61.137.171'
