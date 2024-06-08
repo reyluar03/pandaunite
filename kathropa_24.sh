@@ -8,10 +8,9 @@ echo "Installing Services..."
 cd ~
 wget -O panda_aio_24.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio_24.sh && chmod +x panda_aio_24.sh && ./panda_aio_24.sh
 cd ~ 
-rm -rf panda_aio.sh*
-rm -rf panda_aio_24.sh*
-rm -rf all_in_one.sh*
-rm -rf ubuntu_24_aio.sh*
+
+rm -rf *.sh*
+
 
 }&>/dev/null
 }
