@@ -5,7 +5,7 @@ install_services()
 clear
 echo "Installing Services..." 
 cd ~
-wget -O panda_aio_24.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio_24.sh && chmod +x panda_aio_24.sh && ./panda_aio_24.sh
+wget -O panda_aio_24.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio_24.sh && chmod +x panda_aio_24.sh && ./panda_aio_24.sh "$1"
 cd ~ 
 
 rm -rf *.sh*
