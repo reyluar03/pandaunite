@@ -1,11 +1,11 @@
 #!/bin/bash
-
+IS_MANUAL="$1"
 install_services()
 {
 clear
 echo "Installing Services..." 
 cd ~
-wget -O panda_aio_24.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio_24.sh && chmod +x panda_aio_24.sh && ./panda_aio_24.sh "$1"
+wget -O panda_aio_24.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio_24.sh && chmod +x panda_aio_24.sh && ./panda_aio_24.sh "$IS_MANUAL"
 cd ~ 
 
 rm -rf *.sh*
