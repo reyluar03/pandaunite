@@ -25,7 +25,7 @@ cat <<EOM > /etc/openvpn/login/config.sh
 HOST='185.61.137.171'
 USER='daddyjoh_zachary_db2024'
 PASS='zachary_db2024'
-DB='daddyjoh_zachary_db
+DB='daddyjoh_zachary_db'
 EOM
 cp /etc/openvpn/login/config.sh /etc/hysteria/config.sh
 
