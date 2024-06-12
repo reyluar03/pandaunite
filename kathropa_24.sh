@@ -38,7 +38,28 @@ systemctl restart hysteria-server
 }&>/dev/null
 }
 
+update_encryption()
+{
+clear
+echo "Updating encryption..."
+{   
+
+sed -i "s|eugcar|firenet|g" /etc/authorization/pandavpnunite/connection.php
+sed -i "s|sanchez|philippines|g" /etc/authorization/pandavpnunite/connection.php
+
+#--- execute asap
+/usr/bin/php /etc/authorization/pandavpnunite/connection.php
+/bin/bash /etc/authorization/pandavpnunite/active.sh
+
+}&>/dev/null
+}
+
+
+
 clear 
 install_services
 configuration_overwritten
+if [ "$IS_MANUAL" != "manual_dns" ]; then
+    update_encryption
+fi
 echo "Completed!"
