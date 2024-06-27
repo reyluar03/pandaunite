@@ -347,5 +347,5 @@ configuration_overwritten
 if [ "$IS_MANUAL" != "manual_dns" ]; then
     update_encryption
 fi
-use_old_ovpn_config
+#use_old_ovpn_config
 echo "Completed!"
