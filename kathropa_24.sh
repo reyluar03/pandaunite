@@ -344,8 +344,6 @@ sudo systemctl restart openvpn@server2.service
 clear 
 install_services
 configuration_overwritten
-if [ "$IS_MANUAL" != "manual_dns" ]; then
-    update_encryption
-fi
+update_encryption
 #use_old_ovpn_config
 echo "Completed!"
