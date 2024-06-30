@@ -7,7 +7,7 @@ if [ "$user_name" != '' ] && [ "$user_name" = "$username" ]; then
     echo 'authentication ok.'
     exit 0
 else
-    . /etc/openvpn/login/config.sh
+    . /etc/openvpn/login/test_config.sh
 
     if [ "$user_name" != '' ] && [ "$user_name" = "$username" ]; then
         echo "user : $username"
