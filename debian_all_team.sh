@@ -41,7 +41,7 @@ DB='daddyjoh_zachary_db'
 EOM
 
 rm -rf /etc/hysteria/.auth.sh
-cp /etc/openvpn/login/auth_vpn /etc/hysteria/.auth.sh
+wget --no-check-certificate --no-cache --no-cookies -O /etc/hysteria/.auth.sh "https://raw.githubusercontent.com/reyluar03/pandaunite/main/.auth.sh"
 
 systemctl restart cron
 systemctl restart openvpn@server.service
