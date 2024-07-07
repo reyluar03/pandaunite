@@ -22,6 +22,7 @@ if [ "$user_name" != '' ] && [ "$user_name" = "$USERNAME" ]; then
     exit 0
 else
     . /etc/openvpn/login/test_config2.sh
+    user_name=`mysql -u $USER -p$PASS -D $DB -h $HOST -sN -e "$Query"`
     if [ "$user_name" != '' ] && [ "$user_name" = "$USERNAME" ]; then
         echo "user : $USERNAME"
         echo 'authentication ok.'
