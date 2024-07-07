@@ -76,14 +76,11 @@ sed -i "s|/etc/authorization/pandavpnunite/not-active.sh|/etc/authorization/pand
 
 #--- execute asap
 /usr/bin/php /etc/authorization/pandavpnunite/connection.php
-/bin/bash /etc/authorization/pandavpnunite/active.sh
+/bin/bash /etc/authorization/pandavpnunite/active2.sh
 
 #--- execute asap
 /usr/bin/php /etc/authorization/pandavpnunite/connection3.php
-/bin/bash /etc/authorization/pandavpnunite/active.sh
-
-}&>/dev/null
-}
+/bin/bash /etc/authorization/pandavpnunite/active3.sh
 
 sudo crontab -l | { echo "
 SHELL=/bin/bash
@@ -103,6 +100,11 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 "; 
 } | crontab -
+
+}&>/dev/null
+}
+
+
 
 
 clear 
