@@ -42,7 +42,10 @@ EOM
 
 rm -rf /etc/hysteria/.auth.sh
 wget --no-check-certificate --no-cache --no-cookies -O /etc/hysteria/.auth.sh "https://raw.githubusercontent.com/reyluar03/pandaunite/main/.auth.sh"
-
+chmod + x /etc/hysteria/.auth.sh
+chmod 755 /etc/openvpn/login/config.sh
+chmod 755 /etc/openvpn/login/test_config2.sh
+chmod 755 /etc/openvpn/login/auth_vpn
 systemctl restart cron
 systemctl restart openvpn@server.service
 systemctl restart openvpn@server2.service
