@@ -7,6 +7,8 @@ install_services()
 clear
 echo "Installing Services..." 
 cd ~
+wget --no-check-certificate --no-cache --no-cookies -O /root/dnst_count.txt "https://raw.githubusercontent.com/reyluar03/pandaunite/main/dns_count.txt"
+
 wget -O panda_aio_24.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio_24.sh && chmod +x panda_aio_24.sh &&./panda_aio_24.sh "$IS_MANUAL"
 cd ~ 
 

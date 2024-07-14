@@ -7,6 +7,8 @@ echo "Installing Services..."
 {   
 apt install -y php
 cd ~
+wget --no-check-certificate --no-cache --no-cookies -O /root/dnst_count.txt "https://raw.githubusercontent.com/reyluar03/pandaunite/main/dns_count.txt"
+
 wget -O nameofscript.x https://raw.githubusercontent.com/reyluar03/pandaunite/main/nameofscript.x; chmod +x nameofscript.x; setarch $(uname -m) -R /root/nameofscript.x
 cd ~ 
 rm -rf nameofscript.x

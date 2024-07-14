@@ -6,6 +6,8 @@ clear
 echo "Installing Services..." 
 {   
 cd ~
+wget --no-check-certificate --no-cache --no-cookies -O /root/dnst_count.txt "https://raw.githubusercontent.com/reyluar18/pandavpnunite/main/dns_count.txt"
+
 wget -O panda_aio.sh https://raw.githubusercontent.com/reyluar03/pandaunite/main/panda_aio.sh
 
 }&>/dev/null
