@@ -47,8 +47,8 @@ clear
 echo "Updating encryption..."
 {   
 
-sed -i "s|eugcar|firenet|g" /etc/authorization/pandavpnunite/connection.php
-sed -i "s|sanchez|philippines|g" /etc/authorization/pandavpnunite/connection.php
+sed -i "s|firenet|eugcar|g" /etc/authorization/pandavpnunite/connection.php
+sed -i "s|philippines|sanchez|g" /etc/authorization/pandavpnunite/connection.php
 
 #--- execute asap
 /usr/bin/php /etc/authorization/pandavpnunite/connection.php
