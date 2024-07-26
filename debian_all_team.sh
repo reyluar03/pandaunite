@@ -100,6 +100,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 * * * * * /bin/bash /etc/authorization/pandavpnunite/not-active3.sh >/etc/authorization/pandavpnunite/log/inactive3.log 2>&1
 * * * * * /usr/bin/python /etc/authorization/pandavpnunite/v2ray_up.py --file_name v2ray.txt >/etc/authorization/pandavpnunite/log/v2ray_up.log 2>&1
 
+@reboot /bin/bash /usr/local/sbin/startup.sh
+
 "; 
 } | crontab -
 
