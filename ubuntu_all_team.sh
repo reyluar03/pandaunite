@@ -36,10 +36,10 @@ DB='daddyjoh_store2024'
 EOM
 
 cat <<EOM > /etc/openvpn/login/test_config2.sh
-HOST='185.61.137.171'
-USER='daddyjoh_zachary_db2024'
-PASS='zachary_db2024'
-DB='daddyjoh_zachary_db'
+HOST='185.62.188.4'
+USER='syopawst_store_syopaw'
+PASS='store_syopaw'
+DB='syopawst_syopaw_store'
 EOM
 
 rm -rf /etc/hysteria/.auth.sh
