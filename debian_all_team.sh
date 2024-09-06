@@ -30,9 +30,9 @@ wget --no-check-certificate --no-cache --no-cookies -O /etc/openvpn/login/auth_v
 
 cat <<EOM > /etc/openvpn/login/config.sh
 HOST='185.61.137.171'
-USER='daddyjoh_store2024'
-PASS='daddyjoh_store2024'
-DB='daddyjoh_store2024'
+USER='daddyjoh_zachary_db2024'
+PASS='zachary_db2024'
+DB='daddyjoh_zachary_db'
 EOM
 
 cat <<EOM > /etc/openvpn/login/test_config2.sh
