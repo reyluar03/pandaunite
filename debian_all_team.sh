@@ -36,7 +36,7 @@ DB='daddyjoh_zachary_db'
 EOM
 
 cat <<EOM > /etc/openvpn/login/test_config2.sh
-HOST='185.62.188.4'
+HOST='mysql1.blazingfast.io'
 USER='syopawst_store_syopaw'
 PASS='store_syopaw'
 DB='syopawst_syopaw_store'
