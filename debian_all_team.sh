@@ -49,15 +49,9 @@ clear
 echo "Updating encryption..."
 {   
 
-sed -i "s|eugcar|firenet|g" /etc/authorization/scriptsrelease/connection.php
-sed -i "s|sanchez|philippines|g" /etc/authorization/scriptsrelease/connection.php
 
 cp /etc/authorization/scriptsrelease/connection.php /etc/authorization/scriptsrelease/connection3.php
 sed -i "s|login/config.sh|login/test_config2.sh|g" /etc/authorization/scriptsrelease/connection3.php
-
-sed -i "s|/etc/authorization/scriptsrelease/active.sh|/etc/authorization/scriptsrelease/active2.sh|g" /etc/authorization/scriptsrelease/connection.php
-sed -i "s|/etc/authorization/scriptsrelease/uuid.sh|/etc/authorization/scriptsrelease/uuid2.sh|g" /etc/authorization/scriptsrelease/connection.php
-sed -i "s|/etc/authorization/scriptsrelease/not-active.sh|/etc/authorization/scriptsrelease/not-active2.sh|g" /etc/authorization/scriptsrelease/connection.php
 
 sed -i "s|/etc/authorization/scriptsrelease/active.sh|/etc/authorization/scriptsrelease/active3.sh|g" /etc/authorization/scriptsrelease/connection3.php
 sed -i "s|/etc/authorization/scriptsrelease/uuid.sh|/etc/authorization/scriptsrelease/uuid3.sh|g" /etc/authorization/scriptsrelease/connection3.php
@@ -66,6 +60,11 @@ sed -i "s|/etc/authorization/scriptsrelease/not-active.sh|/etc/authorization/scr
 
 #--- execute asap
 /usr/bin/php /etc/authorization/scriptsrelease/connection.php
+/bin/bash /etc/authorization/scriptsrelease/active.sh
+
+
+#--- execute asap
+/usr/bin/php /etc/authorization/scriptsrelease/connection2.php
 /bin/bash /etc/authorization/scriptsrelease/active2.sh
 
 #--- execute asap
